@@ -1,0 +1,33 @@
+Unity Package Manager Diagnostics (v0.2.0)
+============
+Ran 6 checks
+============
+2 succeeded
+4 failed
+============
+❌ UPM registry reachable (FAIL)
+Make an HTTP request to the UPM package registry
+>> Connection error.
+
+❌ Ping UPM registry (FAIL)
+Measure the latency of the UPM package registry API
+>> No successful pings could be made in 22.211 seconds (1 failed)
+
+❌ Ping UPM download (FAIL)
+Measure the latency of the UPM package download endpoint
+>> No successful pings could be made in 72.271 seconds (1 failed)
+
+❌ UPM registry download speed (FAIL)
+Test the Internet connection using the UPM package registry
+>> Cannot connect to 'download.packages.unity.com:443'. This could be because there is no Internet access or the host is inaccessible due to firewall or proxy settings.
+
+✅ HTTP proxy environment variables (PASS)
+Detect whether proxy-related environment variables are set (HTTP_PROXY, HTTPS_PROXY, ALL_PROXY, NO_PROXY, UNITY_PROXYSERVER, UNITY_NOPROXY)
+>> No proxy support has been configured through environment variables.
+
+✅ UPM health check (PASS)
+Start the UPM process and call its health endpoint
+>> Server start duration: 3184.00 ms
+>> Server response duration: 802.50 ms
+>> Server response:
+>> {"status":"OK","nodeVersion":"v16.13.1","upmVersion":"v5.0.0"}
